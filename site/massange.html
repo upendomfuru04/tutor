@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>global</title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  
+</head>
+<style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding: 1.5rem 3.5rem;
+  top: 0;
+  left: 0;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #fe6600;
+  font-size: 20px;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #fe6600;
+  color: white;
+}
+
+.header .logo img {
+  width:7.5em;
+
+}
+
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #fe6600;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fe6600;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 400px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+}
+.active {
+  border-bottom:2px ;
+}
+
+.sub{
+  position: relative;
+  display:flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  overflow-x: scroll;
+}
+
+
+.sub a{
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+
+}
+
+.sub a:hover{
+  color:#fe6600; 
+}
+
+.sub a.active{
+  color: #fe6600;
+}
+
+.sub::-webkit-scrollbar{
+  width: 25px;
+  height: 7px;
+  background-color: #fff;
+}
+  
+
+.sub::-webkit-scrollbar-thumb{
+  height: 15px;
+  background: linear-gradient(45deg,);
+  cursor: pointer;
+  border-radius: 30%;
+  border-bottom: 1px solid #fe6600;
+  border-top: 1px solid #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button {
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: none;
+  color: #fe6600;
+  text-align: center;
+  font-size: 17px;
+  padding: 15px;
+  width: 170px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+section {
+    text-align: justify;
+    padding: 0 2em 2em;
+}
+
+
+
+
+footer {
+    background-color: #fe6600;
+    padding: 3em 4em 2em;
+}
+
+
+    footer .row {
+        margin: 2em 0;
+        font-family: lato;
+        color: #fff;
+        position: relative;
+        border-bottom: 1px solid #cecece;
+    }
+    
+    .footer-toggle {
+        display: none;
+    }
+
+    .link-cat {
+        cursor:pointer;
+    }
+    
+    footer ul {
+        padding:0;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;        
+    }
+
+        footer ul li {
+            list-style-type: none;
+            padding:0;            
+            -webkit-transition: all .5s ease-in-out;            
+            transition: all .5s ease-in-out;
+            line-height: 2;            
+        }  
+
+       
+
+        .footer-cat-links a {
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .footer-cat-links.active > li a {
+            pointer-events: auto;
+        }
+
+        .footer-cat-links a:after {
+            top: 21px;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            width: 0;
+            background: #fff;
+            
+            -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        }
+
+        .footer-cat-links a:hover:after, .footer-cat-links a:focus:after {
+            width: 100%;
+            left: 0;
+        }
+
+       
+
+       
+    .col-3 {
+        display: inline-table;
+        width:25%;
+    }
+
+    .col-3#newsletter {
+        width:24%
+    }
+
+   }
+
+    .social-links {
+        bottom: 44px;
+        position: absolute;
+        right: 0;
+    }
+    
+        .social-links a {
+            color: #fff;
+            font-size: 20px;
+            border: 1px solid;
+            border-radius: 20px;
+            padding: 6px;
+
+            -webkit-transition:all .2s ease-in;
+            transition:all .2s ease-in;
+        }
+
+        .social-links a:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .social-links a:hover, .social-links a:focus {
+            background-color: #fe6600;
+        }
+
+            .social-links a i {
+                width: 25px;
+                height: 25px;
+                text-align:center;
+            }
+
+            #newsletter #address li:not(:first-child) {
+                padding: 20px 0;
+            }
+        
+                #newsletter #address li i {
+                    font-size: 45px;
+                    width: auto;
+                    padding: 5px;
+                }
+
+                    #newsletter #address li div {
+                        color: #cecece;
+                        font-size: 14px;
+                        width: 80%;
+                        text-align: left;
+                        float: right;
+                        line-height: 1.3;
+                    }
+
+    #copyright {
+        text-align: center;
+        color:#fff;
+        font-family: lato;
+    }
+
+
+@media only screen and (max-width : 1024px) {    
+
+    .col-3 {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+        position: relative;
+    }
+
+      
+        
+    footer .footer-cat {
+        margin-left: 25px;
+    }
+     
+    .footer-toggle,.footer-toggle::after {
+        background: #fff;
+        height: 2px;
+        width: 15px;
+        position: absolute;
+        display: block;
+        -webkit-transition:all .4s ease-in;
+        transition:all .4s ease-in;
+    }
+
+    .footer-toggle {        
+        top: 11px;
+        cursor:pointer;
+    }
+
+    .footer-toggle::after {
+        content: '';
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+
+    .btnActive .footer-toggle::after {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    .footer-cat-links {
+        margin: 0 0em 0px 1.6em;
+    }
+
+        .footer-cat-links a {
+            pointer-events: none;
+        }
+    
+    .footer-cat-links li {
+        line-height: 0;
+        opacity: 0;
+    }
+
+    .footer-cat-links.active > li{
+        line-height:2;
+        opacity:1;
+    }
+
+    .social-1 {
+        display: none !important;
+    }
+
+   
+
+   
+}
+
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+    
+    footer {
+        padding-right:3em;
+        padding-left:3em;
+    }
+
+    .col-3 {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+    
+}
+
+ 
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {  
+    
+    section {
+        padding-bottom: 3em;
+    }
+
+    .sec-heading {
+        padding:1em 0;
+    }
+    
+    .col-3 {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+    .banner .content h2{
+    font-size: 2em;
+    color: #072f5f;
+}
+
+}
+
+
+@media only screen and (max-width : 600px) {  
+    
+    .col-3 {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+
+    .col-6 {
+        width: 100%;
+        display: inline-flex;
+    }
+    
+    footer {
+        padding: 3em 2em 2em;
+    }
+    .banner .content h2{
+    font-size: 2em;
+    color: #072f5f;
+}
+}
+
+@media only screen and (max-width : 480px) {  
+
+    .col-6 {
+        width: 100%;
+        display: block;
+    }
+    
+    footer {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    .banner .content h2{
+    font-size: 3em;
+    color: #072f5f;
+}
+}
+
+
+.wpp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.wrapper{
+  background: #fff;
+  width: 550px;
+  border-radius: 16px;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+             :  0 32px 64px 0 rgba(0,0,0,0.5);
+}
+
+
+
+
+
+.users{
+  padding: 25px 30px;
+}
+
+.users .content img{
+  height: 50px;
+  width: 50px;
+}
+
+.users .content,
+.users-list a .content{
+  display: flex;
+  align-items: center;
+}
+
+
+.wrapper img{
+  object-fit:cover;
+  border-radius: 50%; 
+}
+
+.users .details,
+.users-list a .content{
+  margin-left: 15px;
+  color: #000;
+}
+
+
+
+
+.users .details span,
+.users-list a .content{
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+
+.users .search{
+   margin: 20px 0;
+   display: flex;
+   position: relative;
+   align-items: center;
+   justify-content: space-between;
+
+}
+
+.users .search .text{
+  font-size: 18px;
+}
+
+
+
+.users .search input{
+  position: absolute;
+  height: 33px;
+  width:calc(100% - 32px) ;
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0;
+   pointer-events: none;
+   transition: all 0.3s ease;
+}
+
+.users .search input.active{
+  opacity: 1;
+   pointer-events: auto;
+}
+
+.users .search button{
+  width: 31px;
+  height: 32px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #fe6600;
+  border-radius: 0 5px 5px 0;
+  font-size: 18px;
+}
+
+.users-list{
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+
+.users-list a{
+ margin-bottom:15px;
+ page-break-after: 10px; 
+ border-bottom-color: #f1f1f1;
+ padding-right:15px;
+
+}
+
+.users-list a{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-between;
+
+}
+
+.users-list a:last-child{
+  border: none;
+  margin-bottom: 0px;
+}
+
+.users-list a .content img{
+  height: 40px;
+  width: 40px;
+}
+.users-list a .content p{
+  color: #67676a;
+}
+
+.users-list a .status-dot{
+  font-size: 12px;
+  color: #468669;
+}
+
+.chart-area .hda{
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+}
+
+.chart-area .hda img{
+  height: 45px;
+  width: 45px;
+  margin: 0 15px;
+}
+
+
+.chart-area .hda span{
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.chart-box{
+  height: 500px;
+  overflow-y: auto;
+  background: #f7f7f7;
+  padding: 10px 30px 20px 30px;
+   box-shadow: inset 0 32px 32px -32px rgba(0 0 / 5%),        
+             :  inset 0 -32px 32px -32px rgba(0 0 / 5%);
+}
+
+.chart-box .chart p{
+  word-wrap: break-word;
+  padding: 8px 19px;
+  box-shadow: 0  0 32px rgba(0 0 / 8%),        
+             :0 16px 16px -16px rgba(0 0 / 10%);
+}
+
+.chart-box .out{
+  display: flex;
+  align-items: center;
+}
+
+.out .details {
+  margin-left: auto;
+  max-width: calc(100% - 130px);
+}
+
+.out .details p{
+  font-size: 15px;
+  background: #333;
+  color: #fff;
+  border-radius: 18px 18px 0 18px;
+}
+
+
+.chart-box .inc img{
+  height: 35px;
+  width: 35px;
+}
+
+.chart-box .inc{
+  display: flex;
+  align-items: flex-end;
+}
+
+.inc .details {
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100%-130px); 
+}
+
+.inc .details p{
+  font-size: 15px;
+  background: #fff;
+  color: #333;
+  border-radius: 18px 18px 18px 0;
+}
+
+.chart-area .typing-area{
+  padding: 18px 38px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.typing-area input{
+  height: 45px;
+  width: calc(100% );
+  font-size: 17px;
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.typing-area button{
+  width: 55px;
+  border: none;
+  outline: none;
+  background: #333;
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+</style>
+<body> 
+
+<header class="header">
+  <a href="" class="logo"><img src="global.png"></a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+     <li><a href="index.html">Home</a></li>
+      <li><a href="tutor.html">Choose Tutors</a></li>
+      <li><a href="clss.html">Group Classes</a></li>
+      <li><a href="Course.html">Courses</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Signup</a></li>
+  </ul>
+</header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="sub">
+  <a href=""></a>
+  <a href="dash.html" class="active"> Dashbord</a>
+    <a href="massange.html">Massage</a>
+   <a href="profil.html">Profile</a>
+   <a href="tutor.html">Tutor</a>
+    <a href="webner.html">Webinar</a>
+    <a href="#">course</a>
+    <a href="#">myGroupClasses</a>
+    <a href="#">My1on1Class</a>
+    <a href="#">courseManage</a>
+    <a href="#">courseTransaction</a>
+    <a href="#">Transactions</a>
+    <a href="trans.html">Lessons</a>
+    <a href="course.html">Course</a>
+    <a href="lesson.html">Appointments</a>
+    <a href="mcourse.html">Payout</a>
+   <a href="refund.html">Request</a>
+  
+</div>
+<br>
+<br>
+
+
+
+<section class="wpp">
+
+ <div class="wrapper">
+   <section class="users">
+     <div class="content">
+       <img src="img1.png">
+       <div class="details">
+         <span>Upendo Myfair</span>
+         <p>Active now</p>
+       </div>
+     </div>
+     <div class="search">
+       <span class="text"></span>
+       <input type="text" placeholder="Search or start new chart">
+       <button><i class="fa fa-search"></i></button>
+     </div>
+     <div class="users-list">
+       <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+       <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+ </div>
+   </section>
+ </div>
+
+
+
+
+
+
+ <div class="wrapper">
+   <section class="chart-area">
+    <div class="hda">
+       <img src="img1.png">
+       <div class="details">
+         <span>Upendo Myfair</span>
+         <p>Active now</p>
+       </div>
+     </div>
+      <div class="chart-box">
+        <div class="chart out">
+          
+          <div class="details">
+            <p>upendo myfair soft naturaly beauty upendo myfair soft naturaly beauty</p>
+          </div>
+        </div>
+        <div class="chart inc">
+          <img src="img1.png">
+          <div class="details">
+            <p>naturaly mild upendo myfair soft naturaly beauty</p>
+          </div>
+        </div>
+
+        <div class="chart out">
+          
+          <div class="details">
+            <p>upendo myfair soft naturaly beauty upendo myfair soft naturaly beauty</p>
+          </div>
+        </div>
+        <div class="chart inc">
+          <img src="img1.png">
+          <div class="details">
+            <p>naturaly mild upendo myfair soft naturaly beauty</p>
+          </div>
+        </div>
+        <div class="chart out">
+          
+          <div class="details">
+            <p>upendo myfair soft naturaly beauty upendo myfair soft naturaly beautyupendo myfair soft naturaly beautyupendo myfair soft naturaly beauty</p>
+          </div>
+        </div>
+        <div class="chart inc">
+          <img src="img1.png">
+          <div class="details">
+            <p>naturaly mild upendo myfair soft naturaly beauty</p>
+          </div>
+        </div>
+        <div class="chart out">
+          
+          <div class="details">
+            <p>upendo myfair soft naturaly beauty upendo myfair soft naturaly beauty </p>
+          </div>
+        </div>
+        <div class="chart inc">
+          <img src="img1.png">
+          <div class="details">
+            <p>naturaly mild upendo myfair soft naturaly beauty</p>
+          </div>
+        </div>
+      </div>
+      <form action="#" class="typing-area">
+        <input type="text" placeholder="type a message here...">
+        <button><i class="fa fa-telegram"></i> </button>
+      </form>
+   </section>
+ </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+       <div class="row">
+            <div class="col-3">                
+                <div class="link-cat">
+                    <span class="footer-toggle"></span>
+                </div>
+                <p class="footer-cat-links">
+                    iGlobalClass-practise makes <br>
+                    progress. find top rated<br>
+                    instructors guide you in <br>
+                    every step of your journey. <br>
+                    Try a free lesson today. <br>
+                    Tutors are waiting for you
+                </p>
+                <button class="button"><span>Register</span></button>
+            </div>
+            <div class="col-3">
+                <div class="link-cat">
+                    <span class="footer-toggle"></span>
+      
+                </div>
+                <ul class="footer-cat-links">
+                    <li><a href=""><span>Resources</span></a></li>
+                    <li><a href=""><span>Group Classes</span></a></li>
+                    <li><a href=""><span>Categories</span></a></li>
+                    <li><a href=""><span>Subject</span></a></li>
+                    <li><a href=""><span>Find tutors</span></a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <div class="link-cat">
+                    <span class="footer-toggle"></span>
+                </div>
+                <ul class="footer-cat-links">
+                  <li><a href=""><span>About company</span></a></li>
+                  <li><a href=""><span>How it works</span></a></li>
+                  <li><a href=""><span>Teach with us</span></a></li>
+                  <li><a href=""><span>FAQs</span></a></li>
+                  <li><a href=""><span>Terms & Condition</span></a></li>
+                  <li><a href=""><span>Refund policy</span></a></li>
+                  <li><a href=""><span>Privacy policy</span></a></li>
+                  <li><a href=""><span>About us</span></a></li>
+                </ul>
+            </div>
+            <div class="col-3" id="newsletter">
+                <b><span>Contact Us</span></b>
+                <p>Emails:<b><span>sales@iglobalclass.co.tz</span></b></p>
+                <p>Emails:<b><span>+255-766 592917</span></b></p>
+                <b><span>Terms of service -privacy policy</span></b>
+            <br>
+            <br>
+            <div class="social-links social-1 col-6">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+
+            </div>
+       </div></div>
+       <div id="copyright">
+           &copy; All Rights Reserved 2022
+       </div>
+    </footer>
+
+
+
+
+
+<script type="text/javascript">
+  const searchBar = document.querySelector(".users .search input"),
+  searchBtn = document.querySelector(".users .search button");
+
+searchBtn.onclick = () =>{
+  searchBar.classList.toggle("active");
+  searchBar.focus();
+  searchBtn.classList.toggle("active");
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
