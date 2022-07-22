@@ -14,6 +14,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
   
 </head>
@@ -593,9 +595,7 @@ footer {
     footer {
         padding: 3em 2em 2em;
     }
-    .banner .content h2{
-    font-size: 2em;
-    color: #072f5f;
+
 }
 }
 
@@ -611,14 +611,357 @@ footer {
         padding-left: 1em;
     }
 
-    .banner .content h2{
-    font-size: 3em;
-    color: #072f5f;
 }
 }
 
 
 
+.r-activity {
+    margin: 6px 0 0;
+    font-size: 12px;
+}
+
+
+.p-text-area, .p-text-area:focus {
+    border: none;
+    font-weight: 300;
+    box-shadow: none;
+    color: #c3c3c3;
+    font-size: 16px;
+}
+
+.profile-info .panel-footer {
+    background-color:#f8f7f5 ;
+    border-top: 1px solid #e7ebee;
+}
+
+.profile-info .panel-footer ul li a {
+    color: #7a7a7a;
+}
+
+.bio-graph-heading {
+    background: #fbc02d;
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+    padding: 40px 110px;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.bio-graph-info {
+    color: #89817e;
+}
+
+.bio-graph-info h1 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+.bio-row {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+    padding:0 15px;
+}
+
+.bio-row p span {
+    width: 100px;
+    display: inline-block;
+}
+
+.bio-chart, .bio-desk {
+    float: left;
+}
+
+.bio-chart {
+    width: 40%;
+}
+
+.bio-desk {
+    width: 60%;
+}
+
+.bio-desk h4 {
+    font-size: 15px;
+    font-weight:400;
+}
+
+.bio-desk h4.terques {
+    color: #4CC5CD;
+}
+
+.bio-desk h4.red {
+    color: #e26b7f;
+}
+
+.bio-desk h4.green {
+    color: #97be4b;
+}
+
+.bio-desk h4.purple {
+    color: #caa3da;
+}
+
+.file-pos {
+    margin: 6px 0 10px 0;
+}
+
+.profile-activity h5 {
+    font-weight: 300;
+    margin-top: 0;
+    color: #c3c3c3;
+}
+
+.summary-head {
+    background: #ee7272;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #ee7272;
+}
+
+.summary-head h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.summary-head p {
+    color: rgba(255,255,255,0.6);
+}
+
+ul.summary-list {
+    display: inline-block;
+    padding-left:0 ;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+ul.summary-list > li {
+    display: inline-block;
+    width: 19.5%;
+    text-align: center;
+}
+
+ul.summary-list > li > a > i {
+    display:block;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+ul.summary-list > li > a {
+    padding: 10px 0;
+    display: inline-block;
+    color: #818181;
+}
+
+ul.summary-list > li  {
+    border-right: 1px solid #eaeaea;
+}
+
+ul.summary-list > li:last-child  {
+    border-right: none;
+}
+
+.activity {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.activity.alt {
+    width: 100%;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.activity span {
+    float: left;
+}
+
+.activity.alt span {
+    float: right;
+}
+.activity span, .activity.alt span {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: #eee;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.activity.terques span {
+    background: #8dd7d6;
+}
+
+.activity.terques h4 {
+    color: #8dd7d6;
+}
+.activity.purple span {
+    background: #b984dc;
+}
+
+.activity.purple h4 {
+    color: #b984dc;
+}
+.activity.blue span {
+    background: #90b4e6;
+}
+
+.activity.blue h4 {
+    color: #90b4e6;
+}
+.activity.green span {
+    background: #aec785;
+}
+
+.activity.green h4 {
+    color: #aec785;
+}
+
+.activity h4 {
+    margin-top:0 ;
+    font-size: 16px;
+}
+
+.activity p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.activity .activity-desk i, .activity.alt .activity-desk i {
+    float: left;
+    font-size: 18px;
+    margin-right: 10px;
+    color: #bebebe;
+}
+
+.activity .activity-desk {
+    margin-left: 70px;
+    position: relative;
+}
+
+.activity.alt .activity-desk {
+    margin-right: 70px;
+    position: relative;
+}
+
+.activity.alt .activity-desk .panel {
+    float: right;
+    position: relative;
+}
+
+.activity-desk .panel {
+    background: #F4F4F4 ;
+    display: inline-block;
+}
+
+
+.activity .activity-desk .arrow {
+    border-right: 8px solid #F4F4F4 !important;
+}
+.activity .activity-desk .arrow {
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    display: block;
+    height: 0;
+    left: -7px;
+    position: absolute;
+    top: 13px;
+    width: 0;
+}
+
+.activity-desk .arrow-alt {
+    border-left: 8px solid #F4F4F4 !important;
+}
+
+.activity-desk .arrow-alt {
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    display: block;
+    height: 0;
+    right: -7px;
+    position: absolute;
+    top: 13px;
+    width: 0;
+}
+
+.activity-desk .album {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.activity-desk .album a{
+    margin-right: 10px;
+}
+
+.activity-desk .album a:last-child{
+    margin-right: 0px;
+}
+
+.searchbox-wrap{
+  display     : flex; 
+  width       : 290px;  
+  margin-top  : 8%;
+ 
+}
+  
+  input{
+     flex                             : 1;
+     padding                          : 25px 15px;
+     font-size                        : 1.1em;
+     
+     -webkit-border-top-left-radius   : 25px;
+     -webkit-border-bottom-left-radius: 25px;
+     -moz-border-radius-topleft       : 25px;
+     -moz-border-radius-bottomleft    : 25px;
+     border-top-left-radius           : 25px;
+     border-bottom-left-radius        : 25px;
+     box-shadow                       : none;
+     border                           : none;
+     box-shadow                       : 2px 4px 6px rgba(0, 0, 0, 0.19);
+
+  }
+  
+  button{
+    padding-right                     : 10px;
+    
+    background-color                  : #fff;
+    -webkit-border-top-right-radius   : 25px;
+    -webkit-border-bottom-right-radius: 25px;
+    -moz-border-radius-topright       : 25px;
+    -moz-border-radius-bottomright    : 25px;
+    border-top-right-radius           : 25px;
+    border-bottom-right-radius        : 25px;
+    box-shadow                        : 5px 4px 6px rgba(0, 0, 0, 0.19);
+    border                            : none;
+    cursor                            : pointer; 
+    cursor                            : hand;
+  }
+    .bt{
+      margin-left     : 50px;
+      padding         : 20px 40px;
+      
+      font-size       : 0.9em;
+      text-transform  : uppercase;
+      font-weight     : 300 ;
+      color           : #fff;
+      background-color: #fe6600;
+      
+      border-radius   : 20px;
+      box-shadow      : 2px 4px 6px rgba(0, 0, 0, 0.19);
+  }
+      .bt:hover{
+        background-color: #1362a1;
+        box-shadow      : 2px 2px 4px rgba(0, 0, 0, 0.19);
+      }
 
 
 
@@ -678,12 +1021,11 @@ footer {
 <br>
 
 
-
 <div class="sub">
   <a href=""></a>
-  <a href="index.html" class="active"> Dashbord</a>
+  <a href="index.html" > Dashbord</a>
     <a href="massange.html">Massage</a>
-   <a href="profil.html">Profile</a>
+   <a href="profil.html" class="active">Profile</a>
    <a href="tutor.html">Tutor</a>
     <a href="webner.html">Webinar</a>
     <a href="#">course</a>
@@ -702,184 +1044,134 @@ footer {
 
 
 
-<section>
- <div class="row">
-  <br>
-    <br>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Profile settings</h3>
-      <p>The profile settings of the tutor can be edited and updated here.</p>
-      
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
+<br>
+<br>
 
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-trello custom-icon"></i>
-      <h3>Invite a Friend</h3>
-      <p>The tutors can invite their friends to the platform.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
+<div class="container bootstrap snippets bootdey">
+<div class="row">
+  <div class="profile-nav col-md-5">
+      <div class="panel">
+          <div class="nav nav-pills nav-stacked">
+
+              <p> Profile name: <span style="color: black" class=" pull-right r-activity">Jonas Hump</span></a></p>
+              <h5> Gender <span style="color: black" class=" pull-right r-activity">Male</span></a></h5>
+              <h5> Email <span style="color: black" class=" pull-right r-activity">jonas2411@yahoo.com</span></a></h5>
+               <h5> Phone Number <span style="color: black" class=" pull-right r-activity">609598765</span></a></h5>
+                <h5>Country:  <span style="color: black" class=" pull-right r-activity">United States of America</span></a></h5>
+                 <h5>State:  <span style="color: black" class=" pull-right r-activity">UT</span></a></h5>
+                  <h5> City: <span style="color: black" class=" pull-right r-activity">LAYTON</span></a></h5>
+              <h5> Address: <span style="color: black" class=" pull-right r-activity">2nd road, 1A Milton ...</span></a></h5>
+               <h5> Language: <span style="color: black" class=" pull-right r-activity">American English</span></a></h5>
+                <h5>Intro video (youtube ID): <span style="color: black" class=" pull-right r-activity">dFSia1LZI4Y</span></a></h5>
+                 <h5> Zip code: <span style="color: black" class=" pull-right r-activity">22180</span></a></h5>
+              <h5> Paypal Email ID: <span style="color: black" class=" pull-right r-activity"></span></a></h5>
+              <h5> Timezone:<span style="color: black" class=" pull-right r-activity">Australia/MelbourneAsia/Kolkata</span></a></h5>
+              <h5> Notification <span style="color: black" class=" pull-right r-activity"></span></a></h5>
+          </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-credit-card custom-icon"></i>
-      <h3>Group Class</h3>
-      <p>The webinars of the group classes posted by the tutor will be displayed here.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-trello custom-icon"></i>
-      <h3> Create a group class </h3>
-      <p>The tutor can create a new group class from here.</p>
-        <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Courses List</h3>
-      <p>The courses created by the tutor will be listed here.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-     
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Create a course</h3>
-      <p>The tutor can create a new course.</p>
-<div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-users custom-icon"></i>
-      <h3>Group class bookings</h3>
-      <p>The appointments made by this tutor for the group classes.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-     
-      <i class="fa fa-credit-card custom-icon"></i>
-       <h3>Payout request</h3>
-      <p>Shows the earning and payout status of the tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
+      <div class="panel">
+         <div class="panel-body bio-graph-info">
 
 
+              <h1>Update password</h1>
+              <div class="searchbox-wrap">
+    <input type="text" placeholder="Enter password">
+    <button><span class="bt">Update</span> </button>
   </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Set your calendar</h3>
-      <p>Allows the tutor to book appointments for his one-one class.</p>
-     <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
+          <p>Blank to keep current password</p>    
+          </div>
+          
       </div>
-    </div>
+      <div class="panel">
+         <div class="panel-body bio-graph-info">
+
+
+
+
+              <h1>Update email</h1>
+              <div class="searchbox-wrap">
+    <input type="text" placeholder="priyainstarama@gmail.com">
+    <button><span class="bt">Update</span> </button>
+  </div>
+          <p>After changing your email, you need to verify it.</p>    
+          </div>
+          
+      </div>
   </div>
 
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>1-1 class bookings</h3>
-      <p>The appointments made by this tutor for the one -one class.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
+  <div class="profile-info col-md-7">
+      <div class="panel">
+          <div class="panel-body bio-graph-info">
+              <h1>Description</h1>
+              <p>Hello everyone!</p>
+
+<p>My name is Pranav, I’m from India.<?</p>
+
+<p>I am really interested to improve my academics and have enrolled for classes in Pinlearn.</p>
+
+<p>Please, write to me, if you interested.</p>
+              
+          </div>
       </div>
-    </div>
+      <div>
+
+        <div class="panel">
+          <div class="panel-body bio-graph-info">
+              <h1>My course certificates</h1>
+              <div class="table-responsive">
+
+  <!--Table-->
+  <table class="table">
+
+    <!--Table head-->
+    <thead>
+   
+      <tr>
+        <th class="th-lg">Course Name</th>
+        <th class="th-lg">Completed Date</th>
+        <th class="th-lg">View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tax Preparation and Law 2021, 2020, 2019 & 2018 - Income Tax Income tax preparation Form 1040 and supporting schedules taught by a Certified Public Accountant (CPA)</td>
+        <td>8/13/21</td>
+        <td> <button type="button" class=" dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button></td>
+      </tr>
+
+
+  </table>
+</div>
+              
+          </div>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-body bio-graph-info">
+              <h1>Invite Friend</h1>
+              <div class="searchbox-wrap">
+    <input type="text" placeholder="">
+    <button><span class="bt">Invite</span> </button>
   </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Courses purchased</h3>
-      <p>The courses purchased by this tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
+             
+              
+          </div>
       </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
+      <div>
+        
+
       
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Earnings dashboard</h3>
-      <p>The earnings made by this tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
+          </div>
       </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Transactions</h3>
-      <p>The transactions made by this tutor with other users.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Add a bank info</h3>
-      <p>The tutor add a PayPal and Bank account for payouts.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Messages</h3>
-      <p>The conversations of this tutor with other tutors or students.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
   </div>
 </div>
-</section>
+</div>
+</tbody>
+</table>
+</div>
+</div>
 
 
 

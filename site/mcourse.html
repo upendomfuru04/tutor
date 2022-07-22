@@ -210,76 +210,17 @@ body {
   border-top: 1px solid #fff;
 }
 
-.card{
-  border: 2px solid #e7e7e7;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-
-}
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px 13px 0;
+table caption {
+  padding: .5em 0;
 }
 
-.row {margin: 0 -5px;}
-
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.card h3 {
-  font-size: 18px;
-  font-weight: bold;
+table.dataTable th,
+table.dataTable td {
+  white-space: nowrap;
 }
 
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-
-.card {
-  padding: 16px;
-  text-align: center;
-}
-
-.toggle_btn{
-cursor: pointer;
-font-size: 16px;
-padding: 10px;
-margin-top: 15px;
-font-weight: 700;
-color: #fe6600;
-border-radius: 5px;
-background-color: transparent;
-}
-
-.toggle_btn.active .fa{
-transform: rotate(180deg);
-}
-
-.custom-icon {
-  font-size:45px;
-  background:#fff;
-  background:#fe6600;
-  padding:30px;
-  -webkit-border-radius:1100%;
-  -moz-border-radius:100%;
-  -o-border-radius:100%;
-  border-radius:100%;
-  color:#fff;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
-  text-align:center;
- 
-}
+td:last-child {text-align:center;}
 
 
 .button {
@@ -681,205 +622,132 @@ footer {
 
 <div class="sub">
   <a href=""></a>
-  <a href="index.html" class="active"> Dashbord</a>
+  <a href="dash.html"> Dashbord</a>
     <a href="massange.html">Massage</a>
-   <a href="profil.html">Profile</a>
+   <a href="index.html">Profile</a>
    <a href="tutor.html">Tutor</a>
     <a href="webner.html">Webinar</a>
-    <a href="#">course</a>
-    <a href="#">myGroupClasses</a>
-    <a href="#">My1on1Class</a>
-    <a href="#">courseManage</a>
-    <a href="#">courseTransaction</a>
-    <a href="#">Transactions</a>
-    <a href="trans.html">Lessons</a>
     <a href="course.html">Course</a>
-    <a href="lesson.html">Appointments</a>
-    <a href="mcourse.html">Payout</a>
+    <a href="trans.html">Transactions</a>
+    <a href="lesson.html">Lessons</a>
+    <a href="mcourse.html" class="active">Courses</a>
    <a href="refund.html">Request</a>
   
 </div>
 
+<br>
 
 
-<section>
- <div class="row">
-  <br>
-    <br>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Profile settings</h3>
-      <p>The profile settings of the tutor can be edited and updated here.</p>
-      
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-trello custom-icon"></i>
-      <h3>Invite a Friend</h3>
-      <p>The tutors can invite their friends to the platform.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-credit-card custom-icon"></i>
-      <h3>Group Class</h3>
-      <p>The webinars of the group classes posted by the tutor will be displayed here.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-trello custom-icon"></i>
-      <h3> Create a group class </h3>
-      <p>The tutor can create a new group class from here.</p>
-        <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Courses List</h3>
-      <p>The courses created by the tutor will be listed here.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-     
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Create a course</h3>
-      <p>The tutor can create a new course.</p>
-<div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-users custom-icon"></i>
-      <h3>Group class bookings</h3>
-      <p>The appointments made by this tutor for the group classes.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-     
-      <i class="fa fa-credit-card custom-icon"></i>
-       <h3>Payout request</h3>
-      <p>Shows the earning and payout status of the tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
 
 
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Set your calendar</h3>
-      <p>Allows the tutor to book appointments for his one-one class.</p>
-     <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+<table id="example" class="table" cellspacing="0" width="100%">
+  <thead>
+    <tr> 
+    <th>course Name</th>        
+      <th>Paid</th>
+      <th>Categories</th>
+      <th>Created At </th>
+      <th>Progress</th>
+      <th>Action</th>
+  </thead>
+  <tbody>          
+    <tr>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P <br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
+      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
+          Yes
+        </button></td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
+      <td>
+        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
+          17%
+        </button></td>
+        <td>
+        <button type="button" class=" dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P<br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
+      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
+          Yes
+        </button></td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
+      <td>
+        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
+          17%
+        </button></td>
+        <td>
+        <button type="button" class=" dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+     <tr>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P<br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
+      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
+          Yes
+        </button></td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
+      <td>
+        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
+          17%
+        </button></td>
+        <td>
+        <button type="button" class=" dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+     <tr>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P<br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
+      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
+          Yes
+        </button></td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
+      <td>
+        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
+          17%
+        </button></td>
+        <td>
+        <button type="button" class="  dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+     <tr>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P<br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
+      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
+          Yes
+        </button></td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
+      <td>
+        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
+          17%
+        </button></td>
+        <td>
+        <button type="button" class=" dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</tr>
+</thead>
 
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>1-1 class bookings</h3>
-      <p>The appointments made by this tutor for the one -one class.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Courses purchased</h3>
-      <p>The courses purchased by this tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Earnings dashboard</h3>
-      <p>The earnings made by this tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Transactions</h3>
-      <p>The transactions made by this tutor with other users.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Add a bank info</h3>
-      <p>The tutor add a PayPal and Bank account for payouts.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Messages</h3>
-      <p>The conversations of this tutor with other tutors or students.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
+</table>
 </div>
-</section>
+</div>
+</div>
 
 
 

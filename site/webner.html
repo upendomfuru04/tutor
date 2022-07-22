@@ -7,13 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   
 </head>
@@ -209,76 +216,107 @@ body {
   border-bottom: 1px solid #fe6600;
   border-top: 1px solid #fff;
 }
-
-.card{
-  border: 2px solid #e7e7e7;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-
+h1{
+  float:left; 
+  width:100%; 
+  color:#232323; 
+  margin-bottom:30px; 
+  font-size: 14px;
 }
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px 13px 0;
-}
-
-.row {margin: 0 -5px;}
-
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.card h3 {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-
-.card {
-  padding: 16px;
-  text-align: center;
-}
-
-.toggle_btn{
-cursor: pointer;
-font-size: 16px;
-padding: 10px;
-margin-top: 15px;
-font-weight: 700;
-color: #fe6600;
-border-radius: 5px;
-background-color: transparent;
-}
-
-.toggle_btn.active .fa{
-transform: rotate(180deg);
-}
-
-.custom-icon {
+h1 span{
+  font-family: 'Libre Baskerville', serif; 
+  display:block; 
   font-size:45px;
-  background:#fff;
-  background:#fe6600;
-  padding:30px;
-  -webkit-border-radius:1100%;
-  -moz-border-radius:100%;
-  -o-border-radius:100%;
-  border-radius:100%;
-  color:#fff;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
-  text-align:center;
- 
+   text-transform:none;
+    margin-bottom:20px; 
+    margin-top:30px; 
+    font-weight:700
+  }
+
+
+
+.profile-card-2 .card-img-block{
+    float:left;
+    width:100%;
+    height:300px;
+    overflow:hidden;
+
+}
+.profile-card-2 .card-body{
+    position:relative;
+}
+.profile-card-2 .profile {
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: 15%;
+  max-width: 79px;
+  border: 3px solid rgba(255, 255, 255, 1);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+.profile-card-2 h5{
+    font-weight:600;
+    color:#fe6600;
+}
+.profile-card-2 .star{
+  float: right;
+}
+
+.profile-card-2 .card-text{
+    font-weight:300;
+    font-size:15px;
+}
+
+
+.checked {
+  color: orange;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.wrap {
+  height: 100%; 
+}
+.card {
+  display: flex;
+  flex: 0 0 auto;
+  background: #fff;
+  max-width: 700px;
+  margin: 80px 0;
+  border-radius:;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.btn a:link, .btn a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #fe6600;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ .btn a:hover, .btn a:active {
+  background-color: #fe6600;
+  color: white;
+  font-size:13px;
+}
+
+ .btn a:hover i {
+  color: red;
+  font-weight: bolder;
+  font-size:15px;
 }
 
 
@@ -678,14 +716,13 @@ footer {
 <br>
 
 
-
 <div class="sub">
   <a href=""></a>
-  <a href="index.html" class="active"> Dashbord</a>
+  <a href="index.html"> Dashbord</a>
     <a href="massange.html">Massage</a>
    <a href="profil.html">Profile</a>
    <a href="tutor.html">Tutor</a>
-    <a href="webner.html">Webinar</a>
+    <a href="webner.html" class="active">Webinar</a>
     <a href="#">course</a>
     <a href="#">myGroupClasses</a>
     <a href="#">My1on1Class</a>
@@ -703,183 +740,69 @@ footer {
 
 
 <section>
- <div class="row">
-  <br>
-    <br>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Profile settings</h3>
-      <p>The profile settings of the tutor can be edited and updated here.</p>
-      
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
+    <div class="container">
+      <div class="row">
+       <h1 class="text-center"><span>Favorite webinar</span></h1>
 
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-trello custom-icon"></i>
-      <h3>Invite a Friend</h3>
-      <p>The tutors can invite their friends to the platform.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
+        
+        <div class="col-md-4">
+            <div class="card profile-card-2">
+                    <div class="card-img-block">
+                        <img class="img-fluid" src="1.png">
+                    </div>
+                    <div class="card-body pt-5">
+                        <img src="11.png" alt="profile-image" class="profile"/>
+                        <div class="star">
+                    <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span> 5(1)</div>
+                        <h5 class="card-title">Jonas Hump</h5>
+                       
+                       
+                       <h4>Do you want to be an AWS Certified Developer Associate? This...</h4>
+                        <p class="card-text text-muted">AZ-900 certification is a must to kick start your ...</p>
+                        <hr>
+                        <div class="btn">
+        <a href="" class=" btn-sm">Book Now</a>
+        <a href="" class=" btn-sm">$90</a>
       </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-credit-card custom-icon"></i>
-      <h3>Group Class</h3>
-      <p>The webinars of the group classes posted by the tutor will be displayed here.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card profile-card-2">
+                    <div class="card-img-block">
+                        <img class="img-fluid" src="2.png">
+                    </div>
+                    <div class="card-body pt-5">
+                        <img src="11.png" alt="profile-image" class="profile"/>
+                        <div class="star">
+                    <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span> 5(1)</div>
+                        <h5 class="card-title">Jonas Hump</h5>
+                       
+                       
+                       <h4>Do you want to be an AWS Certified Developer Associate? This...</h4>
+                        <p class="card-text text-muted">AZ-900 certification is a must to kick start your ...</p>
+                        <hr>
+                         <div class="btn">
+        <a href="" class=" btn-sm">Book Now</a>
+        <a href="" class=" btn-sm">$90</a>
       </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-trello custom-icon"></i>
-      <h3> Create a group class </h3>
-      <p>The tutor can create a new group class from here.</p>
-        <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
+                    </div>
+                </div>
+                
+        </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Courses List</h3>
-      <p>The courses created by the tutor will be listed here.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-     
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Create a course</h3>
-      <p>The tutor can create a new course.</p>
-<div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-users custom-icon"></i>
-      <h3>Group class bookings</h3>
-      <p>The appointments made by this tutor for the group classes.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-     
-      <i class="fa fa-credit-card custom-icon"></i>
-       <h3>Payout request</h3>
-      <p>Shows the earning and payout status of the tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-
-
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Set your calendar</h3>
-      <p>Allows the tutor to book appointments for his one-one class.</p>
-     <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>1-1 class bookings</h3>
-      <p>The appointments made by this tutor for the one -one class.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Courses purchased</h3>
-      <p>The courses purchased by this tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Earnings dashboard</h3>
-      <p>The earnings made by this tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Transactions</h3>
-      <p>The transactions made by this tutor with other users.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Add a bank info</h3>
-      <p>The tutor add a PayPal and Bank account for payouts.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Messages</h3>
-      <p>The conversations of this tutor with other tutors or students.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
 </div>
+
 </section>
+
 
 
 

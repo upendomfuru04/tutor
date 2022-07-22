@@ -210,76 +210,6 @@ body {
   border-top: 1px solid #fff;
 }
 
-.card{
-  border: 2px solid #e7e7e7;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-
-}
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px 13px 0;
-}
-
-.row {margin: 0 -5px;}
-
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.card h3 {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-
-.card {
-  padding: 16px;
-  text-align: center;
-}
-
-.toggle_btn{
-cursor: pointer;
-font-size: 16px;
-padding: 10px;
-margin-top: 15px;
-font-weight: 700;
-color: #fe6600;
-border-radius: 5px;
-background-color: transparent;
-}
-
-.toggle_btn.active .fa{
-transform: rotate(180deg);
-}
-
-.custom-icon {
-  font-size:45px;
-  background:#fff;
-  background:#fe6600;
-  padding:30px;
-  -webkit-border-radius:1100%;
-  -moz-border-radius:100%;
-  -o-border-radius:100%;
-  border-radius:100%;
-  color:#fff;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
-  text-align:center;
- 
-}
 
 
 .button {
@@ -320,6 +250,60 @@ transform: rotate(180deg);
   opacity: 1;
   right: 0;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 23px;
+  align-items: stretch;
+}
+
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid > article img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.grid .text {
+  padding: 20px;
+}
+
+.grid .text h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+.btn a:link, .btn a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #fe6600;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ .btn a:hover, .btn a:active {
+  background-color: #fe6600;
+  color: white;
+  font-size:13px;
+}
+
+ .btn a:hover i {
+  color: red;
+  font-weight: bolder;
+  font-size:15px;
+}
+.checked {
+  color: orange;
+}
+ 
 
 
 
@@ -678,13 +662,12 @@ footer {
 <br>
 
 
-
 <div class="sub">
   <a href=""></a>
-  <a href="index.html" class="active"> Dashbord</a>
+  <a href="index.html"> Dashbord</a>
     <a href="massange.html">Massage</a>
    <a href="profil.html">Profile</a>
-   <a href="tutor.html">Tutor</a>
+   <a href="tutor.html" class="active">Tutor</a>
     <a href="webner.html">Webinar</a>
     <a href="#">course</a>
     <a href="#">myGroupClasses</a>
@@ -701,185 +684,162 @@ footer {
 </div>
 
 
+<br>
+<br>
 
-<section>
- <div class="row">
+  <div class="container">
+  <main class="grid">
+    <article>
+      <img src="a.png" >
+      <div class="text">
+        <h3>Mohammad Alhawamdeh<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Discover how to achieve band 7+ in IELTS today!You..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+  </div>
+    </article>
+    <article>
+      <img src="a.png">
+      <div class="text">
+        <h3>Bianca<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>About MeI coach highly motivated adults who want..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+      <img src="f.png">
+      <div class="text">
+        <h3>Shane Mullis<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>NOTE: I am currently only able to open up my sched...</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+
+    <article>
+      <img src="b.png">
+      <div class="text">
+        <h3>Mercy Joyce<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Students' ReviewMuneer (Yemen)September 25, 2019 •</p>
+       <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+      <img src="c.png">
+      <div class="text">
+        <h3>Paul<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Discover how to achieve band 7+ in IELTS today!You..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+      <img src="a.png">
+      <div class="text">
+        <h3>Sandra Towers<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Hey there!! My name is Sandra and I’m from the sta..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+      <img src="f.png">
+      <div class="text">
+        <h3>Lara Parsons<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Hi Everyone! My name is Lara, I am 34 years old an..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+        <article>
+      <img src="f.png">
+      <div class="text">
+        <h3>Best in class<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Imagine jumping into that boat, and just letting it sail wherever the wind takes you...</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+   
+  </main>
   <br>
-    <br>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Profile settings</h3>
-      <p>The profile settings of the tutor can be edited and updated here.</p>
-      
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-trello custom-icon"></i>
-      <h3>Invite a Friend</h3>
-      <p>The tutors can invite their friends to the platform.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-credit-card custom-icon"></i>
-      <h3>Group Class</h3>
-      <p>The webinars of the group classes posted by the tutor will be displayed here.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-trello custom-icon"></i>
-      <h3> Create a group class </h3>
-      <p>The tutor can create a new group class from here.</p>
-        <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Courses List</h3>
-      <p>The courses created by the tutor will be listed here.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-     
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Create a course</h3>
-      <p>The tutor can create a new course.</p>
-<div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-users custom-icon"></i>
-      <h3>Group class bookings</h3>
-      <p>The appointments made by this tutor for the group classes.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-     
-      <i class="fa fa-credit-card custom-icon"></i>
-       <h3>Payout request</h3>
-      <p>Shows the earning and payout status of the tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-
-
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-laptop custom-icon"></i>
-      <h3>Set your calendar</h3>
-      <p>Allows the tutor to book appointments for his one-one class.</p>
-     <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>1-1 class bookings</h3>
-      <p>The appointments made by this tutor for the one -one class.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Courses purchased</h3>
-      <p>The courses purchased by this tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Earnings dashboard</h3>
-      <p>The earnings made by this tutor.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Transactions</h3>
-      <p>The transactions made by this tutor with other users.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Add a bank info</h3>
-      <p>The tutor add a PayPal and Bank account for payouts.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
-   <div class="column">
-    <div class="card">
-      
-      <i class="fa fa-envelope-o custom-icon"></i>
-      <h3>Messages</h3>
-      <p>The conversations of this tutor with other tutors or students.</p>
-      <div class="toggle_btn">
-          <button class="button"><span>Know More</span></button>
-      </div>
-    </div>
-  </div>
 </div>
-</section>
+
 
 
 
