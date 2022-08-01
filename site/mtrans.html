@@ -14,7 +14,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"/>
 
   
 </head>
@@ -211,6 +210,17 @@ body {
   border-top: 1px solid #fff;
 }
 
+table caption {
+  padding: .5em 0;
+}
+
+table.dataTable th,
+table.dataTable td {
+  white-space: nowrap;
+}
+
+
+td:last-child {text-align:center;}
 
 
 .button {
@@ -549,14 +559,7 @@ footer {
 }
 
 
-table caption {
-  padding: .5em 0;
-}
 
-table.dataTable th,
-table.dataTable td {
-  white-space: nowrap;
-}
 
 
 
@@ -619,7 +622,7 @@ table.dataTable td {
 
 <div class="sub">
   <a href=""></a>
-    <a href="index.html" > Dashbord</a>
+     <a href="index.html" > Dashbord</a>
     <a href="massange.html">Massage</a>
     <a href="category.html">Categories</a>
    <a href="profil.html">Profile</a>
@@ -630,71 +633,44 @@ table.dataTable td {
     <a href="one.html">My1on1Class</a>
     <a href="manager.html">courseManage</a>
     <a href="c.trans.html">courseTransaction</a>
-    <a href="mtrans.html">Transactions</a>
-    <a href="lesson.html" class="active">Lessons</a>
+    <a href="mtrans" class="active">Transactions</a>
+    <a href="lesson.html">Lessons</a>
     <a href="course.html">Course</a>
     <a href="appoint.html">Appointments</a>
     <a href="payout.html">Payout</a>
    <a href="refund.html">Request</a>
   
-  
 </div>
+
 <br>
-<section>
+
+
+
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
 <table id="example" class="table" cellspacing="0" width="100%">
-  <thead>      
+  <thead>
     <tr> 
-    <th>Tutor name</th>        
-     <th>Subjects / Group Class</th>
-     <th>Enroll type</th>
-     <th>Lesson type</th>
-     <th>Paid </th>
-     <th>Start Time</th>
-     <th>To Time</th>
-     <th>Created At </th>
-     <th>Status</th>
+    <th>course Name</th>        
+      <th>Paid</th>
+      <th>Categories</th>
+      <th>Created At </th>
+      <th>Progress</th>
       <th>Action</th>
   </thead>
-  <tbody>              
+  <tbody>          
     <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P <br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
       <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
           Yes
         </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
-      <td>Didn't start</td>
-        <td>
-        <button type="button" class=" dt-delete">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-      </td>
-    </tr>
-   <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
-      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Yes
-        </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
       <td>
         <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
-          Completed
+          17%
         </button></td>
         <td>
         <button type="button" class=" dt-delete">
@@ -703,41 +679,15 @@ table.dataTable td {
       </td>
     </tr>
     <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P<br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
       <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
           Yes
         </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
-      <td>Didn't start</td>
-        <td>
-        <button type="button" class=" dt-delete">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-      </td>
-    </tr>
-   <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
-      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Yes
-        </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
       <td>
         <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
-          Completed
+          17%
         </button></td>
         <td>
         <button type="button" class=" dt-delete">
@@ -745,42 +695,50 @@ table.dataTable td {
         </button>
       </td>
     </tr>
-    <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
+     <tr>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P<br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
       <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
           Yes
         </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
-      <td>Didn't start</td>
-        <td>
-        <button type="button" class=" dt-delete">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-      </td>
-    </tr>
-   <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
-      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Yes
-        </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
       <td>
         <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
-          Completed
+          17%
+        </button></td>
+        <td>
+        <button type="button" class=" dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+     <tr>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P<br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
+      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
+          Yes
+        </button></td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
+      <td>
+        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
+          17%
+        </button></td>
+        <td>
+        <button type="button" class="  dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+     <tr>
+      <td><a href="#">Complete Contract Management Bootcamp 2021: Zero to Hero Get CPM-P<br> Certified & Learn about the key and most important concepts and download 27 free tools of contract management.</a></td>
+      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
+          Yes
+        </button></td>
+      <td>Business</td>
+      <td>01/03/2022, 06:30AM </td>
+      <td>
+        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
+          17%
         </button></td>
         <td>
         <button type="button" class=" dt-delete">
@@ -790,10 +748,15 @@ table.dataTable td {
     </tr>
   </tbody>
 </table>
+</tr>
+</thead>
+
+</table>
 </div>
 </div>
 </div>
-</section>
+
+
 
 <footer>
        <div class="row">

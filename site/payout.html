@@ -14,7 +14,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
   
 </head>
@@ -211,6 +212,76 @@ body {
   border-top: 1px solid #fff;
 }
 
+.card{
+  border: 2px solid #e7e7e7;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px 13px 0;
+}
+
+.row {margin: 0 -5px;}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+.card {
+  padding: 16px;
+  text-align: center;
+}
+
+.toggle_btn{
+cursor: pointer;
+font-size: 16px;
+padding: 10px;
+margin-top: 15px;
+font-weight: 700;
+color: #fe6600;
+border-radius: 5px;
+background-color: transparent;
+}
+
+.toggle_btn.active .fa{
+transform: rotate(180deg);
+}
+
+.custom-icon {
+  font-size:45px;
+  background:#fff;
+  background:#fe6600;
+  padding:30px;
+  -webkit-border-radius:1100%;
+  -moz-border-radius:100%;
+  -o-border-radius:100%;
+  border-radius:100%;
+  color:#fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  text-align:center;
+ 
+}
 
 
 .button {
@@ -524,9 +595,7 @@ footer {
     footer {
         padding: 3em 2em 2em;
     }
-    .banner .content h2{
-    font-size: 2em;
-    color: #072f5f;
+
 }
 }
 
@@ -542,30 +611,388 @@ footer {
         padding-left: 1em;
     }
 
-    .banner .content h2{
-    font-size: 3em;
-    color: #072f5f;
 }
 }
 
 
-table caption {
-  padding: .5em 0;
-}
 
-table.dataTable th,
-table.dataTable td {
-  white-space: nowrap;
+.r-activity {
+    margin: 6px 0 0;
+    font-size: 12px;
 }
 
 
+.p-text-area, .p-text-area:focus {
+    border: none;
+    font-weight: 300;
+    box-shadow: none;
+    color: #c3c3c3;
+    font-size: 16px;
+}
+
+.profile-info .panel-footer {
+    background-color:#f8f7f5 ;
+    border-top: 1px solid #e7ebee;
+}
+
+.profile-info .panel-footer ul li a {
+    color: #7a7a7a;
+}
+
+.bio-graph-heading {
+    background: #fbc02d;
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+    padding: 40px 110px;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.bio-graph-info {
+    color: #89817e;
+}
+
+.bio-graph-info h1 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+.bio-row {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+    padding:0 15px;
+}
+
+.bio-row p span {
+    width: 100px;
+    display: inline-block;
+}
+
+.bio-chart, .bio-desk {
+    float: left;
+}
+
+.bio-chart {
+    width: 40%;
+}
+
+.bio-desk {
+    width: 60%;
+}
+
+.bio-desk h4 {
+    font-size: 15px;
+    font-weight:400;
+}
+
+.bio-desk h4.terques {
+    color: #4CC5CD;
+}
+
+.bio-desk h4.red {
+    color: #e26b7f;
+}
+
+.bio-desk h4.green {
+    color: #97be4b;
+}
+
+.bio-desk h4.purple {
+    color: #caa3da;
+}
+
+.file-pos {
+    margin: 6px 0 10px 0;
+}
+
+.profile-activity h5 {
+    font-weight: 300;
+    margin-top: 0;
+    color: #c3c3c3;
+}
+
+.summary-head {
+    background: #ee7272;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #ee7272;
+}
+
+.summary-head h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.summary-head p {
+    color: rgba(255,255,255,0.6);
+}
+
+ul.summary-list {
+    display: inline-block;
+    padding-left:0 ;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+ul.summary-list > li {
+    display: inline-block;
+    width: 19.5%;
+    text-align: center;
+}
+
+ul.summary-list > li > a > i {
+    display:block;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+ul.summary-list > li > a {
+    padding: 10px 0;
+    display: inline-block;
+    color: #818181;
+}
+
+ul.summary-list > li  {
+    border-right: 1px solid #eaeaea;
+}
+
+ul.summary-list > li:last-child  {
+    border-right: none;
+}
+
+.activity {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.activity.alt {
+    width: 100%;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.activity span {
+    float: left;
+}
+
+.activity.alt span {
+    float: right;
+}
+.activity span, .activity.alt span {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: #eee;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.activity.terques span {
+    background: #8dd7d6;
+}
+
+.activity.terques h4 {
+    color: #8dd7d6;
+}
+.activity.purple span {
+    background: #b984dc;
+}
+
+.activity.purple h4 {
+    color: #b984dc;
+}
+.activity.blue span {
+    background: #90b4e6;
+}
+
+.activity.blue h4 {
+    color: #90b4e6;
+}
+.activity.green span {
+    background: #aec785;
+}
+
+.activity.green h4 {
+    color: #aec785;
+}
+
+.activity h4 {
+    margin-top:0 ;
+    font-size: 16px;
+}
+
+.activity p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.activity .activity-desk i, .activity.alt .activity-desk i {
+    float: left;
+    font-size: 18px;
+    margin-right: 10px;
+    color: #bebebe;
+}
+
+.activity .activity-desk {
+    margin-left: 70px;
+    position: relative;
+}
+
+.activity.alt .activity-desk {
+    margin-right: 70px;
+    position: relative;
+}
+
+.activity.alt .activity-desk .panel {
+    float: right;
+    position: relative;
+}
+
+.activity-desk .panel {
+    background: #F4F4F4 ;
+    display: inline-block;
+}
+
+
+.activity .activity-desk .arrow {
+    border-right: 8px solid #F4F4F4 !important;
+}
+.activity .activity-desk .arrow {
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    display: block;
+    height: 0;
+    left: -7px;
+    position: absolute;
+    top: 13px;
+    width: 0;
+}
+
+.activity-desk .arrow-alt {
+    border-left: 8px solid #F4F4F4 !important;
+}
+
+.activity-desk .arrow-alt {
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    display: block;
+    height: 0;
+    right: -7px;
+    position: absolute;
+    top: 13px;
+    width: 0;
+}
+
+.activity-desk .album {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.activity-desk .album a{
+    margin-right: 10px;
+}
+
+.activity-desk .album a:last-child{
+    margin-right: 0px;
+}
+
+.searchbox-wrap{
+  display     : flex; 
+  width       : 290px;  
+  margin-top  : 8%;
+ 
+}
+  
+  input{
+     flex                             : 1;
+     padding                          : 14px 10px;
+     font-size                        : 1.1em;
+     
+     -webkit-border-top-left-radius   : 25px;
+     -webkit-border-bottom-left-radius: 25px;
+     -moz-border-radius-topleft       : 25px;
+     -moz-border-radius-bottomleft    : 25px;
+     border-top-left-radius           : 25px;
+     border-bottom-left-radius        : 25px;
+     box-shadow                       : none;
+     border                           : none;
+     box-shadow                       : 2px 4px 6px rgba(0, 0, 0, 0.19);
+
+  }
+  
+  button{
+    padding-right                     : 10px;
+    
+    background-color                  : #fff;
+    -webkit-border-top-right-radius   : 25px;
+    -webkit-border-bottom-right-radius: 25px;
+    -moz-border-radius-topright       : 25px;
+    -moz-border-radius-bottomright    : 25px;
+    border-top-right-radius           : 25px;
+    border-bottom-right-radius        : 25px;
+    box-shadow                        : 5px 4px 6px rgba(0, 0, 0, 0.19);
+    border                            : none;
+    cursor                            : pointer; 
+    cursor                            : hand;
+  }
+    .bt{
+      margin-left     : 50px;
+      padding         : 20px 40px;
+      
+      font-size       : 0.9em;
+      text-transform  : uppercase;
+      font-weight     : 300 ;
+      color           : #fff;
+      background-color: #fe6600;
+      
+      border-radius   : 20px;
+      box-shadow      : 2px 4px 6px rgba(0, 0, 0, 0.19);
+  }
+      .bt:hover{
+        background-color: #1362a1;
+        box-shadow      : 2px 2px 4px rgba(0, 0, 0, 0.19);
+      }
 
 
 
 
 
+.buttons{
+  text-align: center;
+  margin: 40px;
+}
+.buttn{
+  display: inline-block;
+  background: #fe6600;
+  margin: 0 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: #FFF;
+  text-decoration: none;
+}
 
 
+.select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: white;
+  border: black;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  font-size: 18px;
+  }
 
 
 
@@ -616,10 +1043,9 @@ table.dataTable td {
 <br>
 
 
-
 <div class="sub">
   <a href=""></a>
-    <a href="index.html" > Dashbord</a>
+  <a href="index.html" > Dashbord</a>
     <a href="massange.html">Massage</a>
     <a href="category.html">Categories</a>
    <a href="profil.html">Profile</a>
@@ -631,169 +1057,182 @@ table.dataTable td {
     <a href="manager.html">courseManage</a>
     <a href="c.trans.html">courseTransaction</a>
     <a href="mtrans.html">Transactions</a>
-    <a href="lesson.html" class="active">Lessons</a>
+    <a href="lesson.html">Lessons</a>
     <a href="course.html">Course</a>
     <a href="appoint.html">Appointments</a>
-    <a href="payout.html">Payout</a>
+    <a href="payout.html" class="active">Payout</a>
    <a href="refund.html">Request</a>
-  
-  
 </div>
+
+
+
 <br>
-<section>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-<table id="example" class="table" cellspacing="0" width="100%">
-  <thead>      
-    <tr> 
-    <th>Tutor name</th>        
-     <th>Subjects / Group Class</th>
-     <th>Enroll type</th>
-     <th>Lesson type</th>
-     <th>Paid </th>
-     <th>Start Time</th>
-     <th>To Time</th>
-     <th>Created At </th>
-     <th>Status</th>
-      <th>Action</th>
-  </thead>
-  <tbody>              
-    <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
-      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
+<br>
+
+<div class="container bootstrap snippets bootdey">
+<div class="row">
+  <div class="profile-nav col-md-7">
+      <div class="panel">
+         <div class="panel-body bio-graph-info">
+
+
+
+
+            <div id="piechart"></div>
+          </div>
+      </div>
+  </div>
+
+  <div class="profile-info col-md-5">
+      <div class="panel">
+          <div class="panel-body bio-graph-info">
+              <h5>Total Earnings : <span style="color: black" class=" pull-right r-activity">$ 260</span></a></h5>
+              <br>
+              <h5> Commission to the site : <span style="color: black" class=" pull-right r-activity">$ 52</span></a></h5>
+              <br>
+               <h5> Tutor Earnings :<span style="color: black" class=" pull-right r-activity">$ 208</span></a></h5>
+<br>
+<br>
+
+               <p>Earnings will be accumulated after 3 days of the class completion to avoid refunds from students after the class is completed.</p>
+              
+          </div>
+      </div>
+      <div>
+             
+             </div>
+      </div>
+         
+  
+
+         <div class="profile-info col-md-10">
+      <div class="panel">
+          <div class="panel-body bio-graph-info">
+           <div class="buttons">
+    <input type="text" placeholder="user@example.com">
+               <a class="buttn" href="#">Stats By Date Range</a>
+               <a class="buttn" href="#">Send Request</a>
+               <a class="buttn" href="#">Add a Bank Account</a>
+</div>
+
+       <h5>Pending <span style="color: black" class=" pull-right r-activity">Approved</span></a></h5>
+              <br>
+              <h5>Commission: $ 0<span style="color: black" class=" pull-right r-activity">Commission: $ 110.2</span></a></h5>
+              <br>
+               <h5>Tutor Balance: $ 0<span style="color: black" class=" pull-right r-activity">Tutor Balance: $ 440.8</span></a></h5>
+              
+          </div>
+      </div>
+      <div>
+        <div>
+       <div class="profile-info col-md-10">
+      <div class="panel">
+          <div class="panel-body bio-graph-info">
+            
+                <h5>Total: $ 260</h5>
+                <h5>Commission: $ 52</h5>
+                <h5>Balance: $ 208</h5>
+                <p>Please select pay out account (*)</p>
+
+                <select class="select">
+        <option value="value1">Bank - bank of india - 456466464664</option>
+        <option value="value1">Paypal - dcdvds@dsvsdvdsv.com
+</option>
+        <option value="value2">Paypal - paypal@mailinator.com</option>
+       
+      </select>
+      <button class="button"><span>Submit</span></button>
+                <p>Read the FAQ for payout related questions</p>
+
+              
+          </div>
+      </div>
+      <div>
+        <div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-info col-md-10">
+            <div class="panel">
+          <div class="panel-body bio-graph-info">
+              <h1>My course certificates</h1>
+              <div class="table-responsive">
+
+  <!--Table-->
+  <table class="table">
+
+    <!--Table head-->
+    <thead>
+   
+      <tr>
+        <th class="th-lg">Data</th>
+        <th class="th-lg">Amount</th>
+        <th class="th-lg">Commision</th>
+        <th class="th-lg">Tutor Balance</th>
+        <th class="th-lg">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nov 22, 2021</td>
+        <td>$ 39  </td>
+        <td>$ 7.8</td>
+        <td>$ 31.2</td>
+        <td> <button type="button" class=" dt-delete">
+          <span style="color: green">Approved</span>
         </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Yes
+      </tr>
+     <tr>
+        <td>Nov 22, 2021</td>
+        <td>$ 39  </td>
+        <td>$ 7.8</td>
+        <td>$ 31.2</td>
+        <td> <button type="button" class=" dt-delete">
+          <span style="color: green">Approved</span>
         </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
-      <td>Didn't start</td>
-        <td>
-        <button type="button" class=" dt-delete">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-      </td>
-    </tr>
-   <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
-      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
+      </tr>
+      <tr>
+        <td>Nov 22, 2021</td>
+        <td>$ 39  </td>
+        <td>$ 7.8</td>
+        <td>$ 31.2</td>
+        <td> <button type="button" class=" dt-delete">
+          <span style="color: green">Approved</span>
         </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Yes
+      </tr>
+      <tr>
+        <td>Nov 22, 2021</td>
+        <td>$ 39  </td>
+        <td>$ 7.8</td>
+        <td>$ 31.2</td>
+        <td> <button type="button" class=" dt-delete">
+          <span style="color: green">Approved</span>
         </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
-      <td>
-        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
-          Completed
-        </button></td>
-        <td>
-        <button type="button" class=" dt-delete">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
-      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Yes
-        </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
-      <td>Didn't start</td>
-        <td>
-        <button type="button" class=" dt-delete">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-      </td>
-    </tr>
-   <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
-      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Yes
-        </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
-      <td>
-        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
-          Completed
-        </button></td>
-        <td>
-        <button type="button" class=" dt-delete">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
-      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Yes
-        </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
-      <td>Didn't start</td>
-        <td>
-        <button type="button" class=" dt-delete">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-      </td>
-    </tr>
-   <tr>
-      <td>Jonas Hump </td>
-      <td>Digital Marketing</td>
-      <td>subject </td>
-      <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Paid Lesson
-        </button></td>
-         <td><button type="button" class="btn btn-primary btn-xs dt-edit">
-          Yes
-        </button></td>
-      <td>18/08/2021,22:30PM </td>
-      <td>18/08/2021, 23:30PM </td>
-      <td>18/08/2021, 03:20AM</td>
-      <td>
-        <button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:13px;">
-          Completed
-        </button></td>
-        <td>
-        <button type="button" class=" dt-delete">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-      </td>
-    </tr>
-  </tbody>
+      </tr>
+
+  </table>
+</div>
+              
+          </div>
+      </div>
+      <div>
+                  
+</div>
+</div>
+</tbody>
 </table>
 </div>
 </div>
+
+      
+          </div>
+      </div>
+
 </div>
-</section>
+</div>
+</div>
+
+
 
 <footer>
        <div class="row">
@@ -864,6 +1303,32 @@ table.dataTable td {
 
 
 
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['COMMISSION - $ 52', 2],
+  ['BALANCE - $ 208', 5],
+  ['TOTAL - $ 260', 7]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
 
 
 
