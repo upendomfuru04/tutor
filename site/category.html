@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>global</title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  
+</head>
+<style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding: 1.5rem 3.5rem;
+  top: 0;
+  left: 0;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #fe6600;
+  font-size: 20px;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #fe6600;
+  color: white;
+}
+
+.header .logo img {
+  width:7.5em;
+
+}
+
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #fe6600;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fe6600;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 400px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+}
+.active {
+  border-bottom:2px ;
+}
+
+.sub{
+  position: relative;
+  display:flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  overflow-x: scroll;
+}
+
+
+.sub a{
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+
+}
+
+.sub a:hover{
+  color:#fe6600; 
+}
+
+.sub a.active{
+  color: #fe6600;
+}
+
+.sub::-webkit-scrollbar{
+  width: 25px;
+  height: 7px;
+  background-color: #fff;
+}
+  
+
+.sub::-webkit-scrollbar-thumb{
+  height: 15px;
+  background: linear-gradient(45deg,);
+  cursor: pointer;
+  border-radius: 30%;
+  border-bottom: 1px solid #fe6600;
+  border-top: 1px solid #fff;
+}
+
+.card{
+  border: 2px solid #e7e7e7;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px 13px 0;
+}
+
+.row {margin: 0 -5px;}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+.card {
+  padding: 16px;
+  text-align: center;
+}
+
+.toggle_btn{
+cursor: pointer;
+font-size: 16px;
+padding: 10px;
+margin-top: 15px;
+font-weight: 700;
+color: #fe6600;
+border-radius: 5px;
+background-color: transparent;
+}
+
+.toggle_btn.active .fa{
+transform: rotate(180deg);
+}
+
+.custom-icon {
+  font-size:45px;
+  background:#fff;
+  background:#fe6600;
+  padding:30px;
+  -webkit-border-radius:1100%;
+  -moz-border-radius:100%;
+  -o-border-radius:100%;
+  border-radius:100%;
+  color:#fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  text-align:center;
+ 
+}
+
+
+.button {
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: none;
+  color: #fe6600;
+  text-align: center;
+  font-size: 17px;
+  padding: 15px;
+  width: 170px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+section {
+    text-align: justify;
+    padding: 0 2em 2em;
+}
+
+
+
+
+footer {
+    background-color: #fe6600;
+    padding: 3em 4em 2em;
+}
+
+
+    footer .row {
+        margin: 2em 0;
+        font-family: lato;
+        color: #fff;
+        position: relative;
+        border-bottom: 1px solid #cecece;
+    }
+    
+    .footer-toggle {
+        display: none;
+    }
+
+    .link-cat {
+        cursor:pointer;
+    }
+    
+    footer ul {
+        padding:0;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;        
+    }
+
+        footer ul li {
+            list-style-type: none;
+            padding:0;            
+            -webkit-transition: all .5s ease-in-out;            
+            transition: all .5s ease-in-out;
+            line-height: 2;            
+        }  
+
+       
+
+        .footer-cat-links a {
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .footer-cat-links.active > li a {
+            pointer-events: auto;
+        }
+
+        .footer-cat-links a:after {
+            top: 21px;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            width: 0;
+            background: #fff;
+            
+            -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        }
+
+        .footer-cat-links a:hover:after, .footer-cat-links a:focus:after {
+            width: 100%;
+            left: 0;
+        }
+
+       
+
+       
+    .col-3 {
+        display: inline-table;
+        width:25%;
+    }
+
+    .col-3#newsletter {
+        width:24%
+    }
+
+   }
+
+    .social-links {
+        bottom: 44px;
+        position: absolute;
+        right: 0;
+    }
+    
+        .social-links a {
+            color: #fff;
+            font-size: 20px;
+            border: 1px solid;
+            border-radius: 20px;
+            padding: 6px;
+
+            -webkit-transition:all .2s ease-in;
+            transition:all .2s ease-in;
+        }
+
+        .social-links a:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .social-links a:hover, .social-links a:focus {
+            background-color: #fe6600;
+        }
+
+            .social-links a i {
+                width: 25px;
+                height: 25px;
+                text-align:center;
+            }
+
+            #newsletter #address li:not(:first-child) {
+                padding: 20px 0;
+            }
+        
+                #newsletter #address li i {
+                    font-size: 45px;
+                    width: auto;
+                    padding: 5px;
+                }
+
+                    #newsletter #address li div {
+                        color: #cecece;
+                        font-size: 14px;
+                        width: 80%;
+                        text-align: left;
+                        float: right;
+                        line-height: 1.3;
+                    }
+
+    #copyright {
+        text-align: center;
+        color:#fff;
+        font-family: lato;
+    }
+
+
+@media only screen and (max-width : 1024px) {    
+
+    .col-3 {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+        position: relative;
+    }
+
+      
+        
+    footer .footer-cat {
+        margin-left: 25px;
+    }
+     
+    .footer-toggle,.footer-toggle::after {
+        background: #fff;
+        height: 2px;
+        width: 15px;
+        position: absolute;
+        display: block;
+        -webkit-transition:all .4s ease-in;
+        transition:all .4s ease-in;
+    }
+
+    .footer-toggle {        
+        top: 11px;
+        cursor:pointer;
+    }
+
+    .footer-toggle::after {
+        content: '';
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+
+    .btnActive .footer-toggle::after {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    .footer-cat-links {
+        margin: 0 0em 0px 1.6em;
+    }
+
+        .footer-cat-links a {
+            pointer-events: none;
+        }
+    
+    .footer-cat-links li {
+        line-height: 0;
+        opacity: 0;
+    }
+
+    .footer-cat-links.active > li{
+        line-height:2;
+        opacity:1;
+    }
+
+    .social-1 {
+        display: none !important;
+    }
+
+   
+
+   
+}
+
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+    
+    footer {
+        padding-right:3em;
+        padding-left:3em;
+    }
+
+    .col-3 {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+    
+}
+
+ 
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {  
+    
+    section {
+        padding-bottom: 3em;
+    }
+
+    .sec-heading {
+        padding:1em 0;
+    }
+    
+    .col-3 {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+    .banner .content h2{
+    font-size: 2em;
+    color: #072f5f;
+}
+
+}
+
+
+@media only screen and (max-width : 600px) {  
+    
+    .col-3 {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+
+    .col-6 {
+        width: 100%;
+        display: inline-flex;
+    }
+    
+    footer {
+        padding: 3em 2em 2em;
+    }
+
+}
+}
+
+@media only screen and (max-width : 480px) {  
+
+    .col-6 {
+        width: 100%;
+        display: block;
+    }
+    
+    footer {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+}
+}
+
+
+
+.r-activity {
+    margin: 6px 0 0;
+    font-size: 12px;
+}
+
+
+.p-text-area, .p-text-area:focus {
+    border: none;
+    font-weight: 300;
+    box-shadow: none;
+    color: #c3c3c3;
+    font-size: 16px;
+}
+
+.profile-info .panel-footer {
+    background-color:#f8f7f5 ;
+    border-top: 1px solid #e7ebee;
+}
+
+.profile-info .panel-footer ul li a {
+    color: #7a7a7a;
+}
+
+.bio-graph-heading {
+    background: #fbc02d;
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+    padding: 40px 110px;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.bio-graph-info {
+    color: #89817e;
+}
+
+.bio-graph-info h1 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+.bio-row {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+    padding:0 15px;
+}
+
+.bio-row p span {
+    width: 100px;
+    display: inline-block;
+}
+
+.bio-chart, .bio-desk {
+    float: left;
+}
+
+.bio-chart {
+    width: 40%;
+}
+
+.bio-desk {
+    width: 60%;
+}
+
+.bio-desk h4 {
+    font-size: 15px;
+    font-weight:400;
+}
+
+.bio-desk h4.terques {
+    color: #4CC5CD;
+}
+
+.bio-desk h4.red {
+    color: #e26b7f;
+}
+
+.bio-desk h4.green {
+    color: #97be4b;
+}
+
+.bio-desk h4.purple {
+    color: #caa3da;
+}
+
+.file-pos {
+    margin: 6px 0 10px 0;
+}
+
+.profile-activity h5 {
+    font-weight: 300;
+    margin-top: 0;
+    color: #c3c3c3;
+}
+
+.summary-head {
+    background: #ee7272;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #ee7272;
+}
+
+.summary-head h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.summary-head p {
+    color: rgba(255,255,255,0.6);
+}
+
+ul.summary-list {
+    display: inline-block;
+    padding-left:0 ;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+ul.summary-list > li {
+    display: inline-block;
+    width: 19.5%;
+    text-align: center;
+}
+
+ul.summary-list > li > a > i {
+    display:block;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+ul.summary-list > li > a {
+    padding: 10px 0;
+    display: inline-block;
+    color: #818181;
+}
+
+ul.summary-list > li  {
+    border-right: 1px solid #eaeaea;
+}
+
+ul.summary-list > li:last-child  {
+    border-right: none;
+}
+
+.activity {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.activity.alt {
+    width: 100%;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.activity span {
+    float: left;
+}
+
+.activity.alt span {
+    float: right;
+}
+.activity span, .activity.alt span {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: #eee;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.activity.terques span {
+    background: #8dd7d6;
+}
+
+.activity.terques h4 {
+    color: #8dd7d6;
+}
+.activity.purple span {
+    background: #b984dc;
+}
+
+.activity.purple h4 {
+    color: #b984dc;
+}
+.activity.blue span {
+    background: #90b4e6;
+}
+
+.activity.blue h4 {
+    color: #90b4e6;
+}
+.activity.green span {
+    background: #aec785;
+}
+
+.activity.green h4 {
+    color: #aec785;
+}
+
+.activity h4 {
+    margin-top:0 ;
+    font-size: 16px;
+}
+
+.activity p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.activity .activity-desk i, .activity.alt .activity-desk i {
+    float: left;
+    font-size: 18px;
+    margin-right: 10px;
+    color: #bebebe;
+}
+
+.activity .activity-desk {
+    margin-left: 70px;
+    position: relative;
+}
+
+.activity.alt .activity-desk {
+    margin-right: 70px;
+    position: relative;
+}
+
+.activity.alt .activity-desk .panel {
+    float: right;
+    position: relative;
+}
+
+.activity-desk .panel {
+    background: #F4F4F4 ;
+    display: inline-block;
+}
+
+
+.activity .activity-desk .arrow {
+    border-right: 8px solid #F4F4F4 !important;
+}
+.activity .activity-desk .arrow {
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    display: block;
+    height: 0;
+    left: -7px;
+    position: absolute;
+    top: 13px;
+    width: 0;
+}
+
+.activity-desk .arrow-alt {
+    border-left: 8px solid #F4F4F4 !important;
+}
+
+.activity-desk .arrow-alt {
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    display: block;
+    height: 0;
+    right: -7px;
+    position: absolute;
+    top: 13px;
+    width: 0;
+}
+
+.activity-desk .album {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.activity-desk .album a{
+    margin-right: 10px;
+}
+
+.activity-desk .album a:last-child{
+    margin-right: 0px;
+}
+
+.searchbox-wrap{
+  display     : flex; 
+  width       : 290px;  
+  margin-top  : 8%;
+ 
+}
+  
+  input{
+     flex                             : 1;
+     padding                          : 25px 15px;
+     font-size                        : 1.1em;
+     
+     -webkit-border-top-left-radius   : 25px;
+     -webkit-border-bottom-left-radius: 25px;
+     -moz-border-radius-topleft       : 25px;
+     -moz-border-radius-bottomleft    : 25px;
+     border-top-left-radius           : 25px;
+     border-bottom-left-radius        : 25px;
+     box-shadow                       : none;
+     border                           : none;
+     box-shadow                       : 2px 4px 6px rgba(0, 0, 0, 0.19);
+
+  }
+  
+  button{
+    padding-right                     : 10px;
+    
+    background-color                  : #fff;
+    -webkit-border-top-right-radius   : 25px;
+    -webkit-border-bottom-right-radius: 25px;
+    -moz-border-radius-topright       : 25px;
+    -moz-border-radius-bottomright    : 25px;
+    border-top-right-radius           : 25px;
+    border-bottom-right-radius        : 25px;
+    box-shadow                        : 5px 4px 6px rgba(0, 0, 0, 0.19);
+    border                            : none;
+    cursor                            : pointer; 
+    cursor                            : hand;
+  }
+    .bt{
+      margin-left     : 50px;
+      padding         : 20px 40px;
+      
+      font-size       : 0.9em;
+      text-transform  : uppercase;
+      font-weight     : 300 ;
+      color           : #fff;
+      background-color: #fe6600;
+      
+      border-radius   : 20px;
+      box-shadow      : 2px 4px 6px rgba(0, 0, 0, 0.19);
+  }
+      .bt:hover{
+        background-color: #1362a1;
+        box-shadow      : 2px 2px 4px rgba(0, 0, 0, 0.19);
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body> 
+
+<header class="header">
+  <a href="" class="logo"><img src="global.png"></a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+     <li><a href="index.html">Home</a></li>
+      <li><a href="tutor.html">Choose Tutors</a></li>
+      <li><a href="clss.html">Group Classes</a></li>
+      <li><a href="Course.html">Courses</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Signup</a></li>
+  </ul>
+</header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="sub">
+  <a href=""></a>
+   <a href="index.html"> Dashbord</a>
+    <a href="massange.html">Massage</a>
+    <a href="category.html" class="active">Categories</a>
+   <a href="profil.html">Profile</a>
+   <a href="tutor.html">Tutor</a>
+    <a href="webner.html">Webinar</a>
+    <a href="course.html">course</a>
+    <a href="classes.html">myGroupClasses</a>
+    <a href="one.html">My1on1Class</a>
+    <a href="manager.html">courseManage</a>
+    <a href="c.trans.html">courseTransaction</a>
+    <a href="mtrans">Transactions</a>
+    <a href="lesson.html">Lessons</a>
+    <a href="course.html">Course</a>
+    <a href="appoint.html">Appointments</a>
+    <a href="payout.html">Payout</a>
+   <a href="refund.html">Request</a>
+  
+</div>
+
+
+
+<br>
+<br>
+
+<div class="container bootstrap snippets bootdey">
+<div class="row">
+  <div class="profile-nav col-md-5">
+      <div class="panel">
+          <div class="nav nav-pills nav-stacked">
+
+               <h1>My course certificates</h1>
+              <div class="table-responsive">
+
+  <!--Table-->
+  <table class="table">
+
+    <!--Table head-->
+    <thead>
+   
+      <tr>
+        <th class="th-lg">Name</th>
+        <th class="th-lg">Activated</th>
+        <th class="th-lg">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Teaching</td>
+        <td><button type="button" class=" dt-delete">
+          <span style="color: green">yes</span>
+        </button></td>
+        <td> <button type="button" class=" dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+        <button type="button" class=" dt-delete">
+          <span style="color: green">List Subjects</span>
+        </button>
+      </td>
+      </tr>
+      <tr>
+        <td>Teaching</td>
+        <td><button type="button" class=" dt-delete">
+          <span style="color: green">yes</span>
+        </button></td>
+        <td> <button type="button" class=" dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+        <button type="button" class=" dt-delete">
+          <span style="color: green">List Subjects</span>
+        </button>
+      </td>
+      </tr>
+      <tr>
+        <td>Teaching</td>
+        <td><button type="button" class=" dt-delete">
+          <span style="color: green">yes</span>
+        </button></td>
+        <td> <button type="button" class=" dt-delete">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        </button>
+        <button type="button" class=" dt-delete">
+          <span style="color: green">List Subjects</span>
+        </button>
+      </td>
+      </tr>
+
+
+  </table>
+</div>
+  </div>
+
+    <div class="profile-nav col-md-19">
+      <div class="panel">
+          <div class="nav nav-pills nav-stacked">
+
+              <div class="table-responsive">
+
+  <!--Table-->
+  <table class="table">
+
+    <!--Table head-->
+    <thead>
+   
+      <tr>
+        <th class="th-lg">Name</th>
+        <th class="th-lg">Activated</th>
+        <th class="th-lg">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+
+
+
+  </table>
+</div>
+  </div>
+    <div class="profile-nav col-md-19">
+      <div class="panel">
+          <div class="nav nav-pills nav-stacked">
+
+              <div class="table-responsive">
+
+  <!--Table-->
+  <table class="table">
+
+    <!--Table head-->
+    <thead>
+   
+      <tr>
+        <th class="th-lg">Name</th>
+        <th class="th-lg">Activated</th>
+        <th class="th-lg">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+
+
+  </table>
+</div>
+  </div>
+      
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<footer>
+       <div class="row">
+            <div class="col-3">                
+                <div class="link-cat">
+                    <span class="footer-toggle"></span>
+                </div>
+                <p class="footer-cat-links">
+                    iGlobalClass-practise makes <br>
+                    progress. find top rated<br>
+                    instructors guide you in <br>
+                    every step of your journey. <br>
+                    Try a free lesson today. <br>
+                    Tutors are waiting for you
+                </p>
+                <button class="button"><span>Register</span></button>
+            </div>
+            <div class="col-3">
+                <div class="link-cat">
+                    <span class="footer-toggle"></span>
+      
+                </div>
+                <ul class="footer-cat-links">
+                    <li><a href=""><span>Resources</span></a></li>
+                    <li><a href=""><span>Group Classes</span></a></li>
+                    <li><a href=""><span>Categories</span></a></li>
+                    <li><a href=""><span>Subject</span></a></li>
+                    <li><a href=""><span>Find tutors</span></a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <div class="link-cat">
+                    <span class="footer-toggle"></span>
+                </div>
+                <ul class="footer-cat-links">
+                  <li><a href=""><span>About company</span></a></li>
+                  <li><a href=""><span>How it works</span></a></li>
+                  <li><a href=""><span>Teach with us</span></a></li>
+                  <li><a href=""><span>FAQs</span></a></li>
+                  <li><a href=""><span>Terms & Condition</span></a></li>
+                  <li><a href=""><span>Refund policy</span></a></li>
+                  <li><a href=""><span>Privacy policy</span></a></li>
+                  <li><a href=""><span>About us</span></a></li>
+                </ul>
+            </div>
+            <div class="col-3" id="newsletter">
+                <b><span>Contact Us</span></b>
+                <p>Emails:<b><span>sales@iglobalclass.co.tz</span></b></p>
+                <p>Emails:<b><span>+255-766 592917</span></b></p>
+                <b><span>Terms of service -privacy policy</span></b>
+            <br>
+            <br>
+            <div class="social-links social-1 col-6">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+
+            </div>
+       </div></div>
+       <div id="copyright">
+           &copy; All Rights Reserved 2022
+       </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
